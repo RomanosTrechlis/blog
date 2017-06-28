@@ -107,8 +107,8 @@ Finally the result is shown in the following image.
 ![Final result][result]
 
 
-[wired]: /images/wired.jpg
-[adaptor_pins]: /images/adaptor_pins.png
-[mega2560]: /images/mega_pins.png
-[exp_adaptor]: /images/exp+adaptor.png
-[result]: /images/result.jpg
+[wired]: images/wired.jpg
+[adaptor_pins]: images/adaptor_pins.png
+[mega2560]: images/mega_pins.png
+[exp_adaptor]: images/exp+adaptor.png
+[result]: images/result.jpg
