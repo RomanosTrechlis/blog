@@ -1,0 +1,10 @@
+title: Maven Plugin for Partial Patches
+tags:
+  - java
+  - maven
+  - patch
+categories:
+  - Java
+short: Sometimes I need to create a partial patch for some dev environment, so I made this plugin to copy either the classes or the java source code to where I wished.
+This plugin copies classes using the same structure and under the same application context as the Web Application.
+date: 2016-12-10 20:14:21
