@@ -6,4 +6,5 @@ tags:
   - hello world
 categories:
   - Arduino
+short: I recently bought an Arduino Mega 2560 with a Ramps 1.4 shield the corresponding stepper motor drivers and an LCD screen. The ultimate goal is to build my first 3d printer using spare parts and then use that printer to make parts for a better one.
 date: 2017-01-14 12:12:21
