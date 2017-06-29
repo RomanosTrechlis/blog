@@ -1,0 +1,5 @@
+title: RSS News Reader Application for Android handheld devices
+date: 2015-08-30 14:14:21
+categories: [Android]
+short: The application implements a simple RSS News feed reader. I started with a lot of auto-generated code and step by step I wrote my own code to fit the problem.
+tags: [android, java, rss]
