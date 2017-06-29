@@ -23,4 +23,4 @@ We analyse the findings of the tree parts and present our thesis on the objecti
 The introduction of my first year thesis in International Relations (May 21, 2014)
 Supervisor: Dr. Fotis Papathanasiou
 
-Read the rest by clicking [here](A comperative study of the Turkey-Israel partnership and the Greek-Cyprus-Israel axis.pdf).
+Read the rest by clicking [here](A_comperative_study_of_the_Turkey-Israel_partnership_and_the_Greek-Cyprus-Israel_axis.pdf).
