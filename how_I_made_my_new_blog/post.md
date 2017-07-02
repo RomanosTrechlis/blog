@@ -53,6 +53,7 @@ The DataSource Type can also be *local* and the Repository can be a folder
     "Type": "local",
     "Repository": "C:/Users/Romanos/Desktop/testLocal/blog/"
 }
+```
 
 ## 2. Use of cli to break functionality
 
