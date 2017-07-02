@@ -1,0 +1,5 @@
+title: How I built my new blog
+date: 2017-07-02 11:33:21
+categories: [Golang]
+short: Today, I 'd like to write about building this blog. I could use a Haxo or Hugo, or any other platform that exists, however I ended up writing my own static site generator in golang.
+tags: [golang, static blog generator]
