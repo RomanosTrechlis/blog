@@ -111,14 +111,18 @@ Additionally, in the html template:
         {{ if ne .PrevPageNum 0}}
         <a href="/{{if ne .PrevPageNum 1}}{{.PrevPageNum}}/{{end}}">
             <!-- Less Than icon by Icons8 -->
-            <img style="vertical-align:middle" class="icon icons8-Less-Than" width="30" height="30">
+            <img style="vertical-align:middle" 
+                 class="icon icons8-Less-Than"
+                 width="30" height="30">
         </a>
         {{end}}
         <span><strong>{{.PageNum}}</strong></span>
         {{ if ne .NextPageNum 0 }}
         <a href="/{{.NextPageNum}}/">
             <!-- More Than icon by Icons8 -->
-            <img style="vertical-align:middle" class="icon icons8-More-Than" width="30" height="30">
+            <img style="vertical-align:middle" 
+                 class="icon icons8-More-Than" 
+                 width="30" height="30">
         </a>
         {{end}}
         {{end}}
@@ -137,29 +141,39 @@ I also like share buttons to my blog posts. So, here is the template code:
         <div class="share-button share-text">
             <span>Share</span>
         </div>
-        <div class="share-button share-button-facebook" data-share-url="{{.URL}}">
+        <div class="share-button share-button-facebook" 
+             data-share-url="{{.URL}}">
             <div class="box">
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{.URL}}">
+                <a href="https://www.facebook.com/sharer/sharer.php
+                ?u={{.URL}}">
                     <!-- Facebook icon by Icons8 -->
-                    <img class="icon icons8-Facebook" width="48" height="48" >
+                    <img class="icon icons8-Facebook" 
+                         width="48" height="48" >
                 </a>
             </div>
         </div>
 
-        <div class="share-button share-button-twitter" data-share-url="{{.URL}}">
+        <div class="share-button share-button-twitter" 
+             data-share-url="{{.URL}}">
             <div class="box">
-                <a href="http://twitter.com/intent/tweet?source=sharethiscom&text={{.PageTitle}}&url={{.URL}}&via=r_trechlis">
+                <a href="http://twitter.com/intent/tweet
+                ?source=sharethiscom
+                &text={{.PageTitle}}
+                &url={{.URL}}&via=r_trechlis">
                     <!-- Twitter icon by Icons8 -->
-                    <img class="icon icons8-Twitter" width="48" height="48" >
+                    <img class="icon icons8-Twitter" 
+                         width="48" height="48" >
                 </a>
             </div>
         </div>
 
-        <div class="share-button share-button-gplus" data-share-url="{{.URL}}">
+        <div class="share-button share-button-gplus" 
+             data-share-url="{{.URL}}">
             <div class="box">
                 <a href="https://plus.google.com/share?url={{.URL}}">
                     <!-- Google Plus icon by Icons8 -->
-                    <img class="icon icons8-Google-Plus" width="48" height="48" >
+                    <img class="icon icons8-Google-Plus" 
+                         width="48" height="48" >
                 </a>
             </div>
         </div>
