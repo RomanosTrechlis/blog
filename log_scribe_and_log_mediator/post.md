@@ -1,10 +1,12 @@
 Recently, at work, I kept falling into a problem regarding log files. The logs are written on the machine the cluster node is in, making their retrieval time consuming. So I decided to tackle this problem with a custom solution that might never be introduced to production, however it will be an excellent weekend problem to solve.
 
 So, what I want, is to make a system:
+
 1. that writes logs to a single location for all cluster nodes and
 1. at the same time respects the security policy we have.
 
 The first thought was to implement an endpoint that receives something to log. What is necessary for logging is:
+
 1. a relative path,
 1. a filename (without the .log extension), and
 1. a line to write.
@@ -101,10 +103,12 @@ Usage of logScribe:
 After the scribe was successfully produced, I begun wondering what would happen if I had so many log requests that a single scribe wouldn't be able to handle.
 
 It's not possible to start more instances of scribes at different ports, since:
+
 1. the cluster node must know the address and port of the scribe in order to communicate with it, and
 1. if two scribes try to write a log line to the same file, it will lock and they will panic.
 
 A **Mediator** was necessary to resolve those two issues. A mediator:
+
 1. keeps track of all instances of scribes,
 1. decides which scribe will write to where, and
 1. is known to the cluster nodes, since they only need know its address and port.
