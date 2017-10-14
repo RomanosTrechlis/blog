@@ -14,9 +14,9 @@ The first thought was to implement an endpoint that receives something to log. W
 
 ## Communication
 
-Looking around I found the gRPC framework for communication between client and server, and the protobuf language to write the structure of the messages exchange between client and server.
+Looking around I found the gRPC framework for communication between client and server, and the protobuf language to write the structure of the messages exchanged between client and server.
 
-This is the message to send to the server:
+This is the message sent to the server:
 ``` protobuf
 message LogRequest {
   string filename = 1;
@@ -34,9 +34,10 @@ service LogScribe {
 }
 ```
 
-Btw, I name the server **logScribe**, because he scribes messages.
+Btw, I named the server **logScribe**, because he scribes messages.
 
-The only remaining thing is to compile the protobuf notation to something we can use, and for this we need the **protoc** command and a given language plugin, like go or java. So, in order to compile it to go code we use the command:
+The only remaining thing is to compile the protobuf notation to something we can use.
+For this we need the **protoc** command and a given language plugin, like go or java. So, in order to compile it to go code we use the command:
 ```shell
 $ protoc --go_out=plugins=grpc:. *.proto
 ```
@@ -111,7 +112,7 @@ A **Mediator** was necessary to resolve those two issues. A mediator:
 
 1. keeps track of all instances of scribes,
 1. decides which scribe will write to where, and
-1. is known to the cluster nodes, since they only need know its address and port.
+1. is alone known to the cluster nodes.
 
 So, the first thing that a scribe must do when it starts is to register to the mediator. The mediator keeps track of all scribes registered to him and makes health checks periodically in order to establish which of them are alive and which are not.
 
@@ -143,15 +144,15 @@ message RegisterResponse {
 }
 ```
 
-The Register service is used by the scribes to register themselves to the mediator. They pass in the RegisterRequest their id and their address in the host:port format, and the must get a Success response.
+The Register service is used by the scribes to register themselves to the mediator. They pass in the RegisterRequest their id and their address in the host:port format, and they must get a *Success* response.
 
-The Pinger service is used to make health checks to scribes. It passed two integer and expects the multiplication result.
+The Pinger service is used to make health checks to scribes. It passes two integers and expects their multiplication result.
 
 ## Scribe files responsibility algorithm
 
 The mediator keeps track of which files each scribe is responsible for, for any given time. The current algorithm to achieve that is the simplest possible one.
 
-This information is kept on a map that has as a key a character and value a scribe id. The character is compared with the first character of the incoming filename. So, if we have two scribes, the first will be responsible for writing to filenames that begin with a to r, including r, and the second scribe from s to 9.
+This information is kept on a map that has as a key a character and value a scribe id. The character is compared with the first character of the incoming filename. So, if we have two scribes, the first will be responsible for writing to filenames that begin with *a to r*, including r, and the second scribe from *s to 9*.
 
 After each health check this map is re-generated.
 
@@ -188,4 +189,4 @@ Usage of logMediator:
 1. keep refactoring.
 
 
-Get full code [here](https://github.com/RomanosTrechlis/logScribe)
+Get the full code [here](https://github.com/RomanosTrechlis/logScribe)
