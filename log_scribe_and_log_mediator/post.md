@@ -1,4 +1,4 @@
-Recently, at work, I keep falling into a problem regarding log files. The logs are saved on the machine the cluster node is in, making their retrieval time consuming. So I decided to tackle this problem with a custom solution that might never be introduced to production, however it will be an excellent weekend problem to solve.
+Recently, at work, I kept falling into a problem regarding log files. The logs are written on the machine the cluster node is in, making their retrieval time consuming. So I decided to tackle this problem with a custom solution that might never be introduced to production, however it will be an excellent weekend problem to solve.
 
 So, what I want, is to make a system:
 1. that writes logs to a single location for all cluster nodes and

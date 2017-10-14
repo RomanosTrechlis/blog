@@ -1,5 +1,5 @@
 title: Writing logs from cluster remotely
 date: 2017-10-14 13:21:30
 categories: [Golang]
-short: Recently, at work, I keep falling into a problem regarding log files. The logs are saved on the machine the cluster node is in, making their retrieval time consuming.
+short: Recently, at work, I kept falling into a problem regarding log files. The logs are written on the machine the cluster node is in, making their retrieval time consuming.
 tags: [golang, logging, gRPC, protobuf]
