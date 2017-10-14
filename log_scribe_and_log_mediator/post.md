@@ -182,3 +182,6 @@ Usage of logMediator:
 1. create a more robust algorithm for load balancing among the Scribes.
 1. investigate the use of sync.Map instead of sync.Mutex.
 1. keep refactoring.
+
+
+Get full code [here](https://github.com/RomanosTrechlis/logScribe)
