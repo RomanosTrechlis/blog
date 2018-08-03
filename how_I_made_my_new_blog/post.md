@@ -194,3 +194,5 @@ type Endpoint interface {
 	Upload(to string) error
 }
 ```
+
+Get the full code [here](https://github.com/RomanosTrechlis/blog-generator)
