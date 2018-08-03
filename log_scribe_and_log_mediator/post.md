@@ -190,4 +190,5 @@ Usage of logMediator:
 1. keep refactoring.
 
 
-Get the full code [here](https://github.com/RomanosTrechlis/logScribe)
+Get the full code [here](https://github.com/RomanosTrechlis/go-scribe)
+

@@ -187,12 +187,10 @@ IsPost is a boolean and URL the blog's url.
 
 I also would like to automatically upload the generated blog to github.
 
-For that end I made the **Endpoint** interface:
+For that end I defined the **Endpoint** interface:
 
 ```go
 type Endpoint interface {
 	Upload(to string) error
 }
 ```
-
-This inteface must implement the Upload function.
