@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/RomanosTrechlis/go-scribe.svg?branch=master)](https://travis-ci.org/RomanosTrechlis/go-scribe)
+[![Go Report Card](https://goreportcard.com/badge/github.com/RomanosTrechlis/go-scribe)](https://goreportcard.com/report/github.com/RomanosTrechlis/go-scribe)
+[![codecov](https://codecov.io/gh/RomanosTrechlis/go-scribe/branch/master/graph/badge.svg)](https://codecov.io/gh/RomanosTrechlis/go-scribe)
+
 **Updated: 3/8/2018**
 
 Recently, at work, I kept falling into a problem regarding log files. Logs are written in files located to the server machine, meaning that for the retrieval someone must have access to the production cluster. In addition, their retrieval is time consuming, since someone must go to each server machine and copy the log files. So, I decided to tackle this problem with a custom solution that might never be introduced to production, however it will be an excellent weekend problem to solve.
