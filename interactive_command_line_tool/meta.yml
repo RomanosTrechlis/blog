@@ -1,5 +1,5 @@
-title: Interactive command line sessions
-date: 2017-08-03 20:00:00
+title: Interactive command line sessions library
+date: 2018-08-03 20:00:00
 categories: [Golang]
 short: I usually have some trouble when it comes to creating a cli for an application. That, of course, led me to create my one library.
 tags: [go, golang, icls, cli]
