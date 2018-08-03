@@ -1,16 +1,18 @@
-Recently, at work, I kept falling into a problem regarding log files. The logs are written on the machine the cluster node is in, making their retrieval time consuming. So I decided to tackle this problem with a custom solution that might never be introduced to production, however it will be an excellent weekend problem to solve.
+**Updated: 3/8/2018**
 
-So, what I want, is to make a system:
+Recently, at work, I kept falling into a problem regarding log files. Logs are written in files located to the server machine, meaning that for the retrieval someone must have access to the production cluster. In addition, their retrieval is time consuming, since someone must go to each server machine and copy the log files. So, I decided to tackle this problem with a custom solution that might never be introduced to production, however it will be an excellent weekend problem to solve.
 
-1. that writes logs to a single location for all cluster nodes and
+What I want, is to make a system:
+
+1. that writes logs to a single location for all cluster nodes,
+1. keep logging into files, and
 1. at the same time respects the security policy we have.
 
-The first thought was to implement an endpoint that receives something to log. What is necessary for logging is:
+The first thought was to implement an endpoint that receives something to log. For file logging, we require:
 
 1. a relative path,
 1. a filename (without the .log extension), and
 1. a line to write.
-
 
 ## Communication
 
@@ -34,7 +36,7 @@ service LogScribe {
 }
 ```
 
-Btw, I named the server **logScribe**, because he scribes messages.
+Btw, I named the server **logScribe**, because it scribes messages.
 
 The only remaining thing is to compile the protobuf notation to something we can use.
 For this we need the **protoc** command and a given language plugin, like go or java. So, in order to compile it to go code we use the command:
@@ -178,12 +180,7 @@ Usage of logMediator:
 
 ## TODO
 
-1. add a one-way SSL authentication for the Scribe (or Mediator) only, in addition to the two ways already implemented:
-
-    * an insecure connection (no SSL) and
-    * a two-way SSL authentication requiring both the client and the Scribe to have SSL.
-
-1. add more flags for the Scribe and Mediator making them more parameterizable from cl.
+1. add a one-way SSL authentication for the Scribe (or Mediator)
 1. create a more robust algorithm for load balancing among the Scribes.
 1. investigate the use of sync.Map instead of sync.Mutex.
 1. keep refactoring.
