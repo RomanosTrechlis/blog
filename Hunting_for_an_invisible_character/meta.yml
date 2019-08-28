@@ -1,0 +1,5 @@
+title: Hunting for an invisible character
+date: 2019-08-28 16:20:21
+categories: [Java]
+short: Recently, I spent some time trying to understand how an xml sent from a server to another become corrupted. I investigated the xml to be sent and it was all right, however, as soon as it was received the system produced an exception. I finally saw that a question mark was prefixing the xml. 
+tags: [java, encoding, utf-8, iso-8859-1]
